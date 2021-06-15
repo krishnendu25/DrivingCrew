@@ -1,9 +1,6 @@
 package com.fes.Constant
-import android.view.Menu
-import android.view.MenuItem
 import android.app.Activity
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
@@ -20,14 +17,14 @@ import android.text.ClipboardManager
 import android.text.TextUtils
 import android.util.Base64
 import android.util.Patterns
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
-import android.view.Window
-import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fes.App
-import com.fes.R
 import com.fes.View.Interface.AlertTask
 import com.google.android.gms.maps.model.LatLng
 import org.json.JSONObject
@@ -43,10 +40,12 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
-import android.widget.PopupMenu
 
 class Constants {
     companion object obj {
+
+        val userTypeList = Arrays.asList("Driver","Rider")
+
         fun getCurrentUnixTimeStamps(): String? {
             return TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis())
                 .toString()
@@ -130,7 +129,7 @@ class Constants {
             })
             dialog.show()
         }*/
-        fun showAlertDialog(c: Context?, body: String?, title: String?, alertTask: AlertTask) {
+        fun showAlertDialog(c: Context?,okBtn:String ,cancle:String,body: String?, title: String?, alertTask: AlertTask) {
             val alertDialogBuilder: AlertDialog.Builder
             alertDialogBuilder = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 AlertDialog.Builder(c)
@@ -141,14 +140,14 @@ class Constants {
             alertDialogBuilder.setMessage(body)
             alertDialogBuilder.setCancelable(false)
             alertDialogBuilder.setPositiveButton(
-                "OK"
+                okBtn
             ) { dialog, which ->
                 dialog.dismiss()
-                alertTask.doInPositiveClick()
+                alertTask.doInPositiveClick(okBtn)
             }
-            alertDialogBuilder.setNegativeButton("CANCLE") { dialog, which ->
+            alertDialogBuilder.setNegativeButton(cancle) { dialog, which ->
                 dialog.dismiss()
-                alertTask.doInNegativeClick()
+                alertTask.doInNegativeClick(cancle)
             }
             val alertDialog = alertDialogBuilder.create()
             alertDialog.setCanceledOnTouchOutside(false)

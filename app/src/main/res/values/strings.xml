@@ -88,4 +88,6 @@
     <string name="driving_licence"><u>Driving Licence</u></string>
     <string name="aadhaar_card"><u>Aadhaar Card</u></string>
     <string name="user_details"><u>Personal Details</u></string>
+    <string name="null_Response">Invalid response received</string>
+    <string name="SomethingLater">Something Wrong Please Try Sometime Later</string>
 </resources>

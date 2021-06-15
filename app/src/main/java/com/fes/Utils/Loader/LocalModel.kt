@@ -28,7 +28,7 @@ class LocalModel {
             }
         }
     private var progressDialog: AlertDialog ? = null
-   /* fun showProgressDialog(context: Activity?, msg: String?) {
+    fun showProgressDialog(context: Activity?, msg: String?) {
         try {
             try {
                 try {
@@ -57,7 +57,7 @@ class LocalModel {
             }
         } catch (e: java.lang.Exception) {
         }
-    }*/
+    }
 
     fun cancelProgressDialog() {
         try {

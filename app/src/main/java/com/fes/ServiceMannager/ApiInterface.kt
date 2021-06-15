@@ -25,7 +25,7 @@ interface ApiInterface {
     @POST(userDriverlogin)
     fun Userdriverlogin(
         @Field("userName") userName: String?,
-        @Field("userType") fcmToken: String?,
+        @Field("userType") userType: String?,
         @Field("passWord") passWord: String?
     ): Call<Userdriverlogin_api>
 
