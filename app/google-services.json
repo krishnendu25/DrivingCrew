@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "139098312185",
+    "project_id": "arka-vyapar-16c19",
+    "storage_bucket": "arka-vyapar-16c19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139098312185:android:4c5beb991e73000b6f8128",
+        "android_client_info": {
+          "package_name": "com.fes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139098312185-7g75836ouv8pfdfi1bqgb0kcvimslilc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fes",
+            "certificate_hash": "998959abe386a6085de2e02588013d2a41685379"
+          }
+        },
+        {
+          "client_id": "139098312185-8mgtrv1i9qanh4smhut4u11420ls7tv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Tqp8iL15kkUGkJlLxLtNBUgNJVmNllY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139098312185-8mgtrv1i9qanh4smhut4u11420ls7tv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

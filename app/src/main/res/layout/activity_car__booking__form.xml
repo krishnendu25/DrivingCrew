@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/centre_background"
+    tools:context=".View.UI.Activity.Rider.Car_Booking_Form">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/padding_10"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="45dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center|start"
+                    android:text="Audi Q2"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/car3s"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/white_broder">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/speedometer"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="@dimen/dimen_12dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/padding_5"
+                            android:text="0-100 kmph\n3.2s"/>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/padding_10"
+                        android:background="@drawable/white_broder">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/seat"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="@dimen/dimen_12dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/padding_5"
+                            android:text="8 Seats"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/padding_10"
+                        android:background="@drawable/white_broder">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_oil"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="@dimen/dimen_12dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/padding_5"
+                            android:text="Diesel"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="Booking Start Date"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select Start Date"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="Booking Start Time"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select Start Time"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="Booking End Date"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select End Date"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Booking End Time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select End Time"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="Drive By"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:drawableEnd="@drawable/ic_dropdown_white"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select Drive By"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="Source Location"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select Source Location"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="Destination Location"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Select Destination Location"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="₹99"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_margin="@dimen/padding_10"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:background="#1C1C1C"
+            android:gravity="center"
+            android:text="Rent Now"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_margin="@dimen/padding_10"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

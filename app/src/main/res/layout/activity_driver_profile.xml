@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/centre_background"
+    tools:context=".View.UI.Activity.Driver.DriverProfileActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_25dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/driveProfileIV"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:civ_border_width="3dp"
+                android:onClick="selectDriverProfile"
+                app:civ_border_color="@color/black"
+                android:src="@drawable/ic_user_profile"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:text="Driver's Profile"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/padding_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/padding_10">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="@string/user_details"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputName"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextName"
+                            style="@style/modifiedEditText"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputEmail"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextEmail"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/login_email_hint"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputMobile"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextMobile"
+                            style="@style/modifiedEditText"
+                            android:hint="Mobile Number"
+                            android:inputType="phone"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputAddress"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextPassword"
+                            style="@style/modifiedEditText"
+                            android:hint="Present Address"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputExperience"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextconfirmPassword"
+                            style="@style/modifiedEditText"
+                            android:hint="Driving Experience"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/padding_10"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/padding_10">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="@string/driving_licence"/>
+
+                    <ImageView
+                        android:id="@+id/driving_licence"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_adharcard"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/padding_10"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/padding_10">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aadhaar_card"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        />
+                    <ImageView
+                        android:id="@+id/aadharcardImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_adharcard"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                android:id="@+id/cirRegisterButton"
+                style="@style/loginButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="SAVE"
+                android:fontFamily="@font/opensans_semibold"
+                app:initialCornerAngle="27dp"
+                app:spinning_bar_color="#FFF"
+                android:elevation="@dimen/dimen_0dp"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_side_bg" />
+
+    <ImageView
+        android:id="@+id/onBackBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/ic_back_img" />
+</RelativeLayout>

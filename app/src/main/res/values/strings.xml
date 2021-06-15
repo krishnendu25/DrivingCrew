@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Driving Crew</string>
+    <string name="login">LOGIN</string>
+    <string name="owner_first_name">Owner First Name</string>
+    <string name="store_name_business_name">Store Name/Business Name</string>
+    <string name="owner_last_name">Owner Last Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="whatsapp_number">Whatsapp Number</string>
+    <string name="email">Email</string>
+    <string name="images_on_your_post_will_appear_of_this_size">Images on your post will appear of this size.</string>
+    <string name="why_visit_store_reason_1">Why visit store - Reason 1</string>
+    <string name="why_visit_store_reason_2">Why visit store - Reason 2</string>
+    <string name="why_visit_store_reason_3">Why visit store - Reason 3</string>
+    <string name="store_address">Store Address</string>
+    <string name="custom_title">SELECT PICTURES</string>
+    <string name="default_directory">Pictures</string>
+    <string name="toolbar_title">Choice Image</string>
+    <string name="no_image">No Image Selected </string>
+    <string-array name="tab_titles">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+    <string name="selected_image">Selected Image</string>
+    <string name="max_count_msg">A maximum of %1$d pictures allowed</string>
+    <string name="min_count_msg">you have to choice %1$d images</string>
+    <string name="focusing">focusing/flash...wait a minute</string>
+    <string name="terms_amp_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <!--   <string name="skip_for_now"><u>Skip for now</u></string>-->
+    <string name="skip_for_now">Skip For Now</string>
+    <string name="attach_image_of_your_adhaar_card"><u>Attach image of your Adhaar card</u></string>
+    <string name="thank_you_mr_bharat_your_basic_registration_is_done_our_team_will_verify_your_documents_will_approve_in_3_working_days"><![CDATA[Thank you Mr. Bharat! Your basic registration is done. Our team will verify your documents & will approve in 3 working days.]]></string>
+    <string name="change_location"><u>Change location</u></string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="notifications">Notifications</string>
+    <string name="my_buyer_list">My Buyer List</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="my_listed_products">My Listed Products</string>
+    <string name="customer_care">Customer Care</string>
+    <string name="category">Category</string>
+    <string name="sub_category">Sub-category</string>
+    <string name="available_quantity">Available Quantity</string>
+    <string name="available_dates">Available dates</string>
+    <string name="add_more"><u>+ Add More</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_all"><u>VIEW ALL</u></string>
+    <string name="no_buying_requests_found"><u>No Buying Requests Found</u></string>
+    <string name="no_seller_found"><u>No Seller Found</u></string>
+    <string name="for_reselling">For Reselling</string>
+    <string name="for_business_use">For Business Use</string>
+    <string name="for_home_use">For Home Use</string>
+    <string name="requests_list">Requests List</string>
+    <string name="call_now">Call Now</string>
+
+    <!-- Resources for LogInActivity -->
+    <string name="don_t_have_an_account_sign_up">Do not have an account? Sign Up</string>
+    <string name="welcom_back_log_in_to_continue_with_ronnystudio_ui_for_android">Welcome back. Log in to continue.</string>
+    <string name="title_activity_signup">Signup</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_confirm_password_hint">Confirm Password</string>
+    <string-array name="Types">
+        <item>For Driver</item>
+        <item>Care Rent</item>
+    </string-array>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="name">Name</string>
+    <string name="mobno">Mobile No.</string>
+    <string name="reg_no">Reg</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="booking_date_21_05_2021"><b>Booking Date :</b> 21-05-2021</string>
+    <string name="booking_time_11_05_pm"><b>Booking Time : </b>11.05 PM</string>
+    <string name="distance_250_km"><b>Distance :</b> 250 KM</string>
+    <string name="cost_km_10"><b>Cost/KM :</b> ₹10</string>
+    <string name="total_cost_2500"><b>Total Cost :</b> ₹2500</string>
+    <string name="status_approved">Status Approved</string>
+    <string name="driving_licence"><u>Driving Licence</u></string>
+    <string name="aadhaar_card"><u>Aadhaar Card</u></string>
+    <string name="user_details"><u>Personal Details</u></string>
+</resources>
