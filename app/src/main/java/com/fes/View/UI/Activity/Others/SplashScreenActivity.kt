@@ -10,8 +10,12 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.fes.App
+import com.fes.Constant.Constants.obj.userTypeList
 import com.fes.R
 import com.fes.Utils.StringUtils
+import com.fes.View.UI.Activity.Driver.Driver_DashBoard
+import com.fes.View.UI.Activity.Rider.Dashboard_ByRider
 
 class SplashScreenActivity : AppCompatActivity() {
     private var mContext: Context? = null
@@ -31,15 +35,21 @@ class SplashScreenActivity : AppCompatActivity() {
         splashLogo!!.startAnimation(animSlide)
         val handler = Handler()
         val runnable = Runnable {
-            /*if (mPrefs.getLoginStatus()) {
-                goToActivity(mContext, DashboardActivity::class.java)
-                finish()
-            } else {
+            if ( App!!.instance!!.mPrefs!!.getUserID().toString().isNullOrBlank()) {
                 goToActivity(mContext, LoginActivity::class.java)
                 finish()
-            }*/
-            goToActivity(mContext, LoginActivity::class.java)
-            finish()
+            } else {
+                if (App!!.instance!!.mPrefs!!.getUserType().equals(userTypeList[0])){
+                    startActivity(Intent(applicationContext, Driver_DashBoard::class.java))
+                    finish()
+                }
+                if (App!!.instance!!.mPrefs!!.getUserType().equals(userTypeList[1])){
+
+                 startActivity(Intent(applicationContext, Dashboard_ByRider::class.java))
+                    finish()
+                }
+            }
+
         }
         handler.postDelayed(runnable, StringUtils.SPLASH_TIMEOUT)
     }

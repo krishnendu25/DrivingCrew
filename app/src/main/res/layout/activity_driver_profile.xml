@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/centre_background"
-    tools:context=".View.UI.Activity.Driver.DriverProfileActivity">
+    tools:context=".View.UI.Activity.Others.ProfileActivity">
 
 
     <ScrollView
@@ -30,14 +30,14 @@
                 app:civ_border_color="@color/black"
                 android:src="@drawable/ic_user_profile"/>
             <TextView
+                android:id="@+id/profileName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_20dp"
                 android:fontFamily="@font/opensans_semibold"
                 android:textColor="@color/white"
-                android:textSize="22dp"
-                android:gravity="center"
-                android:text="Driver's Profile"/>
+                android:textSize="@dimen/dimen_18dp"
+                android:gravity="center"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -84,6 +84,18 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/Age"
+                        style="@style/parent"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextAge"
+                            style="@style/modifiedEditText"
+                            android:hint="Age"
+                            android:inputType="phone"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputMobile"
                         style="@style/parent"
                         android:layout_marginTop="10dp">
@@ -93,16 +105,17 @@
                             style="@style/modifiedEditText"
                             android:hint="Mobile Number"
                             android:inputType="phone"
+                            android:enabled="false"
+                            android:alpha="0.7"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputAddress"
                         style="@style/parent"
                         android:layout_marginTop="10dp">
 
                         <EditText
-                            android:id="@+id/editTextPassword"
+                            android:id="@+id/editTextAddress"
                             style="@style/modifiedEditText"
                             android:hint="Present Address"
                             android:inputType="textPostalAddress"
@@ -115,7 +128,7 @@
                         android:layout_marginTop="10dp">
 
                         <EditText
-                            android:id="@+id/editTextconfirmPassword"
+                            android:id="@+id/editTextDrivingExperience"
                             style="@style/modifiedEditText"
                             android:hint="Driving Experience"
                             android:inputType="number"

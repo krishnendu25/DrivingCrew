@@ -6,12 +6,12 @@ package com.fes.Model.ReponseModel
 data class UserDetails_Api(
     val AADHARPhoto: String,
     val Age: String,
-    val DrivingExperience: Any,
+    val DrivingExperience: String,
     val DrivingLicensePhoto: String,
     val EmailId: String,
     val Name: String,
-    val PhoneNumber: Any,
-    val PresentAddress: Any,
+    val PhoneNumber: String,
+    val PresentAddress: String,
     val ProfilePhoto: String,
     val UserType: String,
     val result: String

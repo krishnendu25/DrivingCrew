@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: br.com.simplepass:loading-button-android:1.14.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ffdfabab354edfbeef72b2de3354768/jetified-loading-button-android-1.14.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ffdfabab354edfbeef72b2de3354768/jetified-loading-button-android-1.14.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ffdfabab354edfbeef72b2de3354768/jetified-loading-button-android-1.14.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/264d51f394266baf9e8f5ad291cd7b58/jetified-loading-button-android-1.14.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/264d51f394266baf9e8f5ad291cd7b58/jetified-loading-button-android-1.14.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/264d51f394266baf9e8f5ad291cd7b58/jetified-loading-button-android-1.14.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/264d51f394266baf9e8f5ad291cd7b58/jetified-loading-button-android-1.14.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.com.simplepass/loading-button-android/1.14.0/4352042538ce3ae84a0fec3d9f99b559443acdd2/loading-button-android-1.14.0-javadoc.jar!/" />

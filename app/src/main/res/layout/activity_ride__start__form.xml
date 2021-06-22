@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/centre_background"
-    tools:context=".View.UI.Activity.Driver.Ride_Start_Form">
+    tools:context=".View.UI.Activity.Driver.RideStartEnd_ByDriver">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,10 +37,11 @@
                     android:visibility="gone"
                     android:layout_centerVertical="true"
                     android:src="@drawable/menu"
-                    android:tint="@color/white"
-                    android:tintMode="src_over" />
+                    android:tintMode="src_over"
+                    app:tint="@color/white" />
             </RelativeLayout>
             <ImageView
+                android:id="@+id/carImageIV"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:src="@drawable/car6"
@@ -54,11 +55,13 @@
                 android:paddingEnd="@dimen/dimen_20dp"
                 android:layout_marginTop="5dp"
                 android:elevation="@dimen/dimen_0dp"
+                android:onClick="CaptureCarPicture"
                 android:background="@drawable/white_btn"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Click To Capture Car Picture"
                 android:textSize="14sp" />
             <ImageView
+                android:id="@+id/meterImageIV"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:src="@drawable/ic_meter"
@@ -72,6 +75,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_gravity="center"
                 android:elevation="@dimen/dimen_0dp"
+                android:onClick="CaptureMeterPicture"
                 android:background="@drawable/white_btn"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Click To Capture Meter Picture"
@@ -86,6 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        android:onClick="submitStartDetails"
         android:orientation="horizontal"
         android:weightSum="2">
 

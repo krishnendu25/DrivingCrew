@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Driving Crew</string>
     <string name="login">LOGIN</string>
+    <string name="GoogleMap_Pro">AIzaSyC_KvtzwnfHt8vYJM4OptuWBlx2Qhgl9cQ</string>
     <string name="owner_first_name">Owner First Name</string>
     <string name="store_name_business_name">Store Name/Business Name</string>
     <string name="owner_last_name">Owner Last Name</string>
@@ -90,4 +91,11 @@
     <string name="user_details"><u>Personal Details</u></string>
     <string name="null_Response">Invalid response received</string>
     <string name="SomethingLater">Something Wrong Please Try Sometime Later</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="title_activity_pick_location_maps">Map</string>
+    <string name="about_us"><u>About Us</u></string>
+    <string name="booking_cost">booking Cost</string>
+    <string name="end_location">END Location</string>
+    <string name="start_location">Start Location</string>
+    <string name="booking_status">Booking Status</string>
 </resources>

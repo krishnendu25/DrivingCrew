@@ -3,11 +3,17 @@ package com.fes.hoori.controller
 
 import com.fes.Model.ReponseModel.*
 import com.fes.ServiceMannager.URLConstants.Companion.AllcarListing
+import com.fes.ServiceMannager.URLConstants.Companion.aboutUs
 import com.fes.ServiceMannager.URLConstants.Companion.carBookedDetails
+import com.fes.ServiceMannager.URLConstants.Companion.carBookingByRider
 import com.fes.ServiceMannager.URLConstants.Companion.carBookngListing
+import com.fes.ServiceMannager.URLConstants.Companion.driverBookingByRider
+import com.fes.ServiceMannager.URLConstants.Companion.driverBookngListing
 import com.fes.ServiceMannager.URLConstants.Companion.driverRegistration
 import com.fes.ServiceMannager.URLConstants.Companion.editDriverDetailsById
 import com.fes.ServiceMannager.URLConstants.Companion.editRiderDetailsById
+import com.fes.ServiceMannager.URLConstants.Companion.getDriverBookedList
+import com.fes.ServiceMannager.URLConstants.Companion.getDriverCarBookedList
 import com.fes.ServiceMannager.URLConstants.Companion.userDetailsById
 import com.fes.ServiceMannager.URLConstants.Companion.userDriverlogin
 import com.fes.ServiceMannager.URLConstants.Companion.userRegistration
@@ -27,20 +33,19 @@ interface ApiInterface {
         @Field("userName") userName: String?,
         @Field("userType") userType: String?,
         @Field("passWord") passWord: String?
-    ): Call<Userdriverlogin_api>
+    ): Call<ResponseBody>
 
     @Multipart
     @POST(driverRegistration)
     fun DriverRegistration(
-        @Part("Name") Name: String?,
-        @Part("Age") Age: String?,
-        @Part("DrivingExperience") DrivingExperience: String?,
-        @Part("PresentAddress") PresentAddress: String?,
-        @Part("PhoneNumber") PhoneNumber: String?,
-        @Part("EmailId") EmailId: String?,
-        @Part("Password") Password: String?,
-        @Part("ConfPassword") ConfPassword: String?,
-        @Part("UserType") UserType: String?,
+        @Part("Name") Name: RequestBody ?,
+        @Part("Age") Age: RequestBody ?,
+        @Part("DrivingExperience") DrivingExperience: RequestBody ?,
+        @Part("PresentAddress") PresentAddress: RequestBody ?,
+        @Part("PhoneNumber") PhoneNumber: RequestBody ?,
+        @Part("EmailId") EmailId: RequestBody ?,
+        @Part("Password") Password: RequestBody ?,
+        @Part("UserType") UserType: RequestBody ?,
         @Part ProfilePhoto: MultipartBody.Part,
         @Part AADHARPhoto: MultipartBody.Part,
         @Part DrivingLicensePhoto: MultipartBody.Part
@@ -50,15 +55,15 @@ interface ApiInterface {
     @Multipart
     @POST(userRegistration)
     fun UserRegistration(
-        @Part("Name") Name: String?,
-        @Part("Age") Age: String?,
-        @Part("DrivingExperience") DrivingExperience: String?,
-        @Part("PresentAddress") PresentAddress: String?,
-        @Part("PhoneNumber") PhoneNumber: String?,
-        @Part("EmailId") EmailId: String?,
-        @Part("Password") Password: String?,
-        @Part("ConfPassword") ConfPassword: String?,
-        @Part("UserType") UserType: String?,
+        @Part("Name") Name: RequestBody ?,
+        @Part("Age") Age: RequestBody ?,
+        @Part("DrivingExperience") DrivingExperience: RequestBody ?,
+        @Part("PresentAddress") PresentAddress: RequestBody ?,
+        @Part("PhoneNumber") PhoneNumber: RequestBody ?,
+        @Part("EmailId") EmailId: RequestBody ?,
+        @Part("Password") Password: RequestBody ?,
+        @Part("ConfPassword") ConfPassword: RequestBody ?,
+        @Part("UserType") UserType: RequestBody ?,
         @Part ProfilePhoto: MultipartBody.Part,
         @Part AADHARPhoto: MultipartBody.Part,
         @Part DrivingLicensePhoto: MultipartBody.Part
@@ -68,50 +73,50 @@ interface ApiInterface {
     @FormUrlEncoded
     @POST(userDetailsById)
     fun getuserDetailsById(
-       
         @Field("UserID") UserID: String?,
         @Field("UserType") UserType: String?
     ): Call<UserDetails_Api>
 
 
-    @FormUrlEncoded
+    @Multipart
     @POST(editDriverDetailsById)
     fun EditDriverDetailsById(
        
-        @Field("UserID") UserID: String?,
-        @Field("Name") Name: String?,
-        @Field("Age") Age: String?,
-        @Field("PresentAddress") PresentAddress: String?,
-        @Field("PhoneNumber") PhoneNumber: String?,
-        @Field("EmailId") EmailId: String?,
-        @Field("UserType") UserType: String?,
+        @Part("UserID") UserID: RequestBody?,
+        @Part("Name") Name: RequestBody?,
+        @Part("Age") Age: RequestBody?,
+        @Part("PresentAddress") PresentAddress: RequestBody?,
+        @Part("PhoneNumber") PhoneNumber: RequestBody?,
+        @Part("EmailId") EmailId: RequestBody?,
+        @Part("UserType") UserType: RequestBody?,
         @Part ProfilePhoto: MultipartBody.Part,
         @Part AADHARPhoto: MultipartBody.Part,
-        @Part DrivingLicensePhoto: MultipartBody.Part
+        @Part DrivingLicensePhoto: MultipartBody.Part,
+        @Part("DrivingExperience") DrivingExperience: RequestBody?
     ): Call<EditUserDetails_api>
 
 
-    @FormUrlEncoded
+    @Multipart
     @POST(editRiderDetailsById)
     fun EditRiderDetailsById(
-        @Field("UserID") UserID: String?,
-        @Field("Name") Name: String?,
-        @Field("Age") Age: String?,
-        @Field("PresentAddress") PresentAddress: String?,
-        @Field("PhoneNumber") PhoneNumber: String?,
-        @Field("EmailId") EmailId: String?,
-        @Field("UserType") UserType: String?,
+        @Part("UserID") UserID: RequestBody?,
+        @Part("Name") Name: RequestBody?,
+        @Part("Age") Age: RequestBody?,
+        @Part("PresentAddress") PresentAddress: RequestBody?,
+        @Part("PhoneNumber") PhoneNumber: RequestBody?,
+        @Part("EmailId") EmailId: RequestBody?,
+        @Part("UserType") UserType: RequestBody?,
         @Part ProfilePhoto: MultipartBody.Part,
         @Part AADHARPhoto: MultipartBody.Part,
-        @Part DrivingLicensePhoto: MultipartBody.Part
+        @Part DrivingLicensePhoto: MultipartBody.Part,
+        @Part("DrivingExperience") DrivingExperience: RequestBody?
     ): Call<EditUserDetails_api>
 
     @FormUrlEncoded
     @POST(carBookngListing)
     fun CarBookngListing(
-        @Field("UserID") UserID: String?,
-        @Field("UserType ") Name: String?
-    ): Call<ResponseBody>
+        @Field("UserID") UserID: String?
+    ): Call<BookedCarListing>
 
 
     @FormUrlEncoded
@@ -127,5 +132,69 @@ interface ApiInterface {
         @Field("UserID") UserID: String?,
         @Field("UserType ") Name: String?
     ): Call<AllCarList_api>
+
+
+    @FormUrlEncoded
+    @POST(driverBookingByRider)
+    fun hitdriverBookingByRider(
+        @Field("UserID") UserID: String?,
+        @Field("UserType") UserType: String?,
+        @Field("HaveMyCar") HaveMyCar: String?,
+        @Field("CarNumber") CarNumber: String?,
+        @Field("BookingCost") BookingCost: String?,
+        @Field("BookingStatus") BookingStatus: String?,
+        @Field("PaymentStatus") PaymentStatus: String?,
+        @Field("PaymentDetails") PaymentDetails: String?,
+        @Field("PickUpPoint") PickUpPoint: String?,
+        @Field("EndPoint") EndPoint: String?,
+        @Field("NoOfPassenger") NoOfPassenger: String?,
+        @Field("StartDate") StartDate: String?,
+        @Field("EndDate") EndDate: String?,
+        @Field("StartTime") StartTime: String?,
+        @Field("EndTime") EndTime: String?
+    ): Call<ResponseBody>
+    @FormUrlEncoded
+    @POST(carBookingByRider)
+    fun hitcarBookingByRider(
+        @Field("UserID") UserID: String?,
+        @Field("UserType") UserType: String?,
+        @Field("CarID") CarID: String?,
+        @Field("DriveBy") CarNumber: String?,
+        @Field("BookingCost") BookingCost: String?,
+        @Field("BookingStatus") BookingStatus: String?,
+        @Field("PaymentStatus") PaymentStatus: String?,
+        @Field("PaymentDetails") PaymentDetails: String?,
+        @Field("SourceLocation") PickUpPoint: String?,
+        @Field("EndLocation") EndPoint: String?,
+        @Field("TotalPerson") NoOfPassenger: String?,
+        @Field("StartDate") StartDate: String?,
+        @Field("EndDate") EndDate: String?,
+        @Field("StartTime") StartTime: String?,
+        @Field("EndTime") EndTime: String?
+    ): Call<ResponseBody>
+
+
+
+    @GET(aboutUs)
+    fun hitaboutUs(): Call<AboutUs>
+
+    @FormUrlEncoded
+    @POST(driverBookngListing)
+    fun getdriverBookngListing(
+        @Field("UserID") UserID: String?
+    ): Call<DriverBookedListAPI>
+
+    @FormUrlEncoded
+    @POST(getDriverBookedList)
+    fun tDriverBookedList(
+        @Field("UserID") UserID: String?
+    ): Call<DriverBookingShowDriver>
+
+    @FormUrlEncoded
+    @POST(getDriverCarBookedList)
+    fun DriverCarBookedList(
+        @Field("UserID") UserID: String?
+    ): Call<GetCarBookingDriver>
+
 
 }

@@ -20,7 +20,7 @@ import java.io.IOException
 class App : Application() {
     public var tokenFCM : String ? =null
     public var apiInterface: ApiInterface? = null
-    public var mPrefs: Prefs?=null
+   lateinit var mPrefs: Prefs
     public var mFusedLocationProviderClient: FusedLocationProviderClient? = null
     override fun onCreate() {
         super.onCreate()
@@ -60,7 +60,7 @@ class App : Application() {
     }
     companion object {
 
-        var instance: App? = null
+       lateinit var instance: App
             private set
 
     }

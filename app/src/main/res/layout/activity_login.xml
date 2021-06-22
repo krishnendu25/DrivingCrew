@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Email or Username"
+                    android:text="Phone Number"
                     android:textColor="#B1A9A9"
                     android:textSize="13.3sp" />
 

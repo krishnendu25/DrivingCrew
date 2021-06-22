@@ -11,7 +11,7 @@ class URLConstants {
         const val userRegistration =
             BuildConfig.BASE_URL + "registration.process.php?act=userRegistration"
         const val userDetailsById = BuildConfig.BASE_URL + "users.process.php?act=userDetailsById";
-        const val userDriverlogin = BuildConfig.BASE_URL + "users.process.php?act=userDriverlogin";
+        const val userDriverlogin = BuildConfig.BASE_URL + "login.process.php?act=userDriverlogin";
         const val editDriverDetailsById =
             BuildConfig.BASE_URL + "users.process.php?act=editDriverDetailsById";
         const val editRiderDetailsById =
@@ -19,6 +19,14 @@ class URLConstants {
         const val carBookngListing = BuildConfig.BASE_URL + "car.process.php?act=carBookngListing"
         const val carBookedDetails = BuildConfig.BASE_URL + "car.process.php?act=carBookedDetails"
         const val AllcarListing = BuildConfig.BASE_URL + "car.process.php?act=carListing"
+        const val driverBookingByRider = BuildConfig.BASE_URL + "car.process.php?act=driverBookingByRider"
+        const val carBookingByRider = BuildConfig.BASE_URL + "car.process.php?act=carBookingByRider"
+        const val aboutUs =BuildConfig.BASE_URL + "users.process.php?act=getAboutUsDetails"
+        const val driverBookngListing  =BuildConfig.BASE_URL + "car.process.php?act=driverBookngListing"
+
+
+        const val getDriverBookedList=BuildConfig.BASE_URL + "car.process.php?act=getDriverBookedList"
+        const val getDriverCarBookedList=BuildConfig.BASE_URL + "car.process.php?act=getDriverCarBookedList"
 
     }
 }

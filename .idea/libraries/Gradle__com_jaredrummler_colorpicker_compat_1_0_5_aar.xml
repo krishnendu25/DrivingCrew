@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.jaredrummler:colorpicker-compat:1.0.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f695b547f702be607981e52520e0258/jetified-colorpicker-compat-1.0.5/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f695b547f702be607981e52520e0258/jetified-colorpicker-compat-1.0.5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f695b547f702be607981e52520e0258/jetified-colorpicker-compat-1.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f695b547f702be607981e52520e0258/jetified-colorpicker-compat-1.0.5/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/colorpicker-compat/1.0.5/431199456d14bd3ae4ef86d5a342c1d0550a574a/colorpicker-compat-1.0.5-javadoc.jar!/" />

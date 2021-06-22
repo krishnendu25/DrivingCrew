@@ -11,13 +11,16 @@ import com.fes.App
 import com.fes.Constant.Animation
 import com.fes.Constant.Constants
 import com.fes.Constant.Constants.obj.userTypeList
-import com.fes.Model.ReponseModel.Userdriverlogin_api
 import com.fes.R
 import com.fes.Utils.Loader.LocalModel
 import com.fes.Utils.Utils
 import com.fes.View.Interface.AlertTask
 import com.fes.View.UI.Activity.Driver.Driver_DashBoard
-import com.fes.View.UI.Activity.Rider.Rider_DashboardActivity
+import com.fes.View.UI.Activity.Others.SignUp.DriverSignUpActivity
+import com.fes.View.UI.Activity.Others.SignUp.RiderSignupActivity
+import com.fes.View.UI.Activity.Rider.Dashboard_ByRider
+import okhttp3.ResponseBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -56,9 +59,10 @@ class LoginActivity : AppCompatActivity() {
                 Animation.editText_Sh(passwordTxt!!)
                 Utils.showToast(this@LoginActivity,"Please Enter Password",Constants.LONG)
             }else{
-
-             Constants.showAlertDialog(this@LoginActivity,userTypeList[0],userTypeList[1],"Which One You are?","Please Select",object :AlertTask{
+            App.instance.mPrefs.setPhoneNo(userNameTxt!!.text.trim().toString());
+             Constants.showAlertDialog(this@LoginActivity,userTypeList[0],userTypeList[1],"Login As","",object :AlertTask{
                  override fun doInPositiveClick(okBtn: String) {
+
                      hitLoginApi(okBtn)
                  }
                  override fun doInNegativeClick(cancle: String) {
@@ -71,37 +75,56 @@ class LoginActivity : AppCompatActivity() {
         }
 
         signupText.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
+            Constants.showAlertDialog(this@LoginActivity,userTypeList[0],userTypeList[1],"SignUp As","",object :AlertTask{
+                override fun doInPositiveClick(okBtn: String) {
+                    startActivity(Intent(applicationContext, DriverSignUpActivity::class.java))
+                }
+                override fun doInNegativeClick(cancle: String) {
+                    startActivity(Intent(applicationContext, RiderSignupActivity::class.java))
+                }
+            })
+
+
+
         }
     }
 
     fun hitLoginApi(okBtn: String) {
-    //    LocalModel.instance!!.showProgressDialog(this@LoginActivity, "Loading..")
-        val requestCall: Call<Userdriverlogin_api> =
+      LocalModel.instance!!.showProgressDialog(this@LoginActivity, "Loading..")
+        val requestCall: Call<ResponseBody> =
             App.instance!!.apiInterface!!.Userdriverlogin(userNameTxt!!.text.toString(), okBtn, passwordTxt!!.text.toString())
-        requestCall.enqueue(object : Callback<Userdriverlogin_api> {
+        requestCall.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(
-                call: Call<Userdriverlogin_api>,
-                response: Response<Userdriverlogin_api>
+                call: Call<ResponseBody>,
+                response: Response<ResponseBody>
             ) {
+                LocalModel.instance!!.cancelProgressDialog()
                 if (response.body() != null) {
-                    if (response.body()!!.result.equals("success",true)){
+                    var jsonObject = JSONObject(response!!.body()!!.string())
+                    if (jsonObject.getString("result").equals("success")){
+                        try {
+                            App!!.instance!!.mPrefs!!.setUserID(jsonObject.getString("userId"))
+                            App!!.instance!!.mPrefs!!.setUserType(okBtn)
+                        } catch (e: Exception) {
+                        }
                         if (okBtn.equals(userTypeList[0],true)){
-                            Intent(applicationContext,Driver_DashBoard::class.java)
+                            startActivity(Intent(applicationContext,Driver_DashBoard::class.java))
+                            finish()
                         }
                         if (okBtn.equals(userTypeList[1],true)){
-                            Intent(applicationContext,Rider_DashboardActivity::class.java)
+                            startActivity(Intent(applicationContext,Dashboard_ByRider::class.java))
+                            finish()
                         }
                     }else{
-                        Utils.showToast(applicationContext,response.body()!!.status,Constants.MIDDLE_LONG)
+                        Utils.showToast(applicationContext,jsonObject.getString("status"),Constants.MIDDLE_LONG)
                     }
+
                 } else {
                     Utils.showToast(applicationContext,resources.getString(R.string.null_Response),Constants.MIDDLE_LONG)
                     LocalModel.instance!!.cancelProgressDialog()
                 }
             }
-            override fun onFailure(call: Call<Userdriverlogin_api>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 LocalModel.instance!!.cancelProgressDialog()
                 Utils.showToast(applicationContext,resources.getString(R.string.SomethingLater),Constants.MIDDLE_LONG)
             }

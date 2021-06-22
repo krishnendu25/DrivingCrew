@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:layout_marginEnd="@dimen/padding_10"
+        android:background="@drawable/all_round_white">
+
+        <LinearLayout
+            android:id="@+id/viewDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="@dimen/padding_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingEnd="@dimen/padding_10"
+                android:singleLine="true"
+                android:text="Driver Not Assigned"
+                android:textColor="@color/green"
+                android:textSize="@dimen/dimen_16dp" />
+
+            <TextView
+                android:id="@+id/driverPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingEnd="@dimen/padding_10"
+                android:singleLine="true"
+                android:text="+91-XXXXXXXXXX"
+                android:textColor="@color/deep_purpel_light"
+                android:textSize="@dimen/dimen_14dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contactView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDriver"
+            android:layout_margin="@dimen/padding_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/callDriver"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#20808080"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:src="@drawable/ic_call" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sendEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_weight="1"
+                    android:background="#20808080"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:src="@drawable/ic_baseline_email_24" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shearDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_weight="1"
+                    android:background="#20808080"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_30dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:src="@drawable/ic_baseline_share_24" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactView"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Booking Status"/>
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Start Location"/>
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="END Location"/>
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="booking Cost"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/booking_status"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|end"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    />
+                <TextView
+                    android:id="@+id/start_location"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|end"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                   />
+                <TextView
+                    android:id="@+id/end_location"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|end"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+                <TextView
+                    android:id="@+id/booking_cost"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#B1A9A9"
+                    android:gravity="center|end"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                 />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/driverImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:src="@drawable/ic_drive_profile"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="3sp" />
+
+</RelativeLayout>

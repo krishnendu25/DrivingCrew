@@ -28,14 +28,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.FileProvider
-import com.fes.BuildConfig
-import com.fes.Constant.Constants
-import com.fes.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.fes.App
+import com.fes.BuildConfig
+import com.fes.Constant.Constants
+import com.fes.R
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.SphericalUtil
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import org.json.JSONArray
 import java.io.*
 import java.text.SimpleDateFormat
@@ -45,6 +51,30 @@ import java.util.*
 class Utils {
 
     companion object {
+        fun setLayoutManager(recyclerView: RecyclerView, HORIZONTAL: Boolean, VERTICAL: Boolean) {
+            if (HORIZONTAL) {
+                recyclerView.layoutManager =
+                    LinearLayoutManager(App.instance, LinearLayoutManager.HORIZONTAL, false)
+            } else if (VERTICAL) {
+                recyclerView.layoutManager =
+                    LinearLayoutManager(App.instance, LinearLayoutManager.VERTICAL, false)
+            }
+        }
+
+        fun cretPart(string: String?):RequestBody {
+          return  RequestBody.create("text/plain".toMediaTypeOrNull(), string!!)
+        }
+        fun cretPartFile(pFile: File?,key_name:String): MultipartBody.Part {
+            var lRequestBody: RequestBody = RequestBody.create(
+                "multipart/form-data".toMediaTypeOrNull(),
+                pFile!!
+            )
+            return MultipartBody.Part.createFormData(key_name, pFile!!.getName(), lRequestBody)
+
+        }
+
+
+
         fun runAnimation(view: View, tada: Techniques, durartion: Long){
             YoYo.with(tada)
                 .duration(durartion)

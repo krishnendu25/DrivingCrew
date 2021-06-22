@@ -3,15 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ProgressBar
-        android:id="@+id/ProgressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:indeterminate="false"
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/centre_button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:progressDrawable="@drawable/greenprogress" />
+        android:padding="@dimen/padding_10">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:visibility="visible"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/padding_10"
+            android:textSize="@dimen/dimen_16dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
 
 
 

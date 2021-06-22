@@ -64,5 +64,27 @@ class Prefs {
         return prefs!!.getString(key, `val`)
     }
 
+    fun setUserID(string:String){
+        setString("login",string)
+    }
+    fun getUserID():String{
+        return getString("login","").toString();
+    }
+
+    fun setUserType(string:String){
+        setString("UserType",string)
+    }
+    fun getUserType():String{
+        return getString("UserType","").toString();
+    }
+
+    fun setPhoneNo(string:String){
+        setString("PhoneNo",string)
+    }
+    fun getPhoneNo():String{
+        return getString("PhoneNo","").toString();
+    }
+
+
 
 }

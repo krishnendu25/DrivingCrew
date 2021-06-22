@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="@dimen/padding_5"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="@dimen/padding_10"
+        app:cardElevation="@dimen/padding_5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/padding_5"
+            android:weightSum="5">
+            <ImageView
+                android:id="@+id/carImage"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/car7"
+                android:layout_weight="2"/>
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:weightSum="3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+                    <TextView
+                        android:id="@+id/bookingDate"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColorHint="#B1A9A9"
+                        android:gravity="center|start"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/booking_date_21_05_2021"/>
+                    <TextView
+                        android:id="@+id/bookingTime"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:textColorHint="#B1A9A9"
+                        android:textSize="@dimen/dimen_12sp"
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/booking_time_11_05_pm"/>
+
+                    <TextView
+                        android:id="@+id/bookingDistance"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:textColorHint="#B1A9A9"
+                        android:textSize="@dimen/dimen_12sp"
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/distance_250_km"/>
+                    <TextView
+                        android:id="@+id/bookingcoste"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:textColorHint="#B1A9A9"
+                        android:textSize="@dimen/dimen_12sp"
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/cost_km_10"/>
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:textColorHint="#B1A9A9"
+                        android:textSize="@dimen/dimen_12sp"
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/status_approved"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

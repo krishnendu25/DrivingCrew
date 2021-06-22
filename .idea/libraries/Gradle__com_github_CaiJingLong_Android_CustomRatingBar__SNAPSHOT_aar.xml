@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.CaiJingLong:Android-CustomRatingBar:-SNAPSHOT@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fff2538799f4f48190b6bec9be570b49/jetified-Android-CustomRatingBar--SNAPSHOT/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fff2538799f4f48190b6bec9be570b49/jetified-Android-CustomRatingBar--SNAPSHOT/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fff2538799f4f48190b6bec9be570b49/jetified-Android-CustomRatingBar--SNAPSHOT/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b0f1e2aaee5f9e350247a16c86a0c8e/jetified-Android-CustomRatingBar--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b0f1e2aaee5f9e350247a16c86a0c8e/jetified-Android-CustomRatingBar--SNAPSHOT/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b0f1e2aaee5f9e350247a16c86a0c8e/jetified-Android-CustomRatingBar--SNAPSHOT/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CaiJingLong/Android-CustomRatingBar/-SNAPSHOT/c6d3f061eea84eb0eb4b40679a6b4bb165a0fc21/Android-CustomRatingBar--SNAPSHOT-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

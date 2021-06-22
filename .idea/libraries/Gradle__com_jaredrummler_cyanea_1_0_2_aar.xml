@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.jaredrummler:cyanea:1.0.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/023224cc9ffa8093eddb056957ee5671/jetified-cyanea-1.0.2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/023224cc9ffa8093eddb056957ee5671/jetified-cyanea-1.0.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/023224cc9ffa8093eddb056957ee5671/jetified-cyanea-1.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/023224cc9ffa8093eddb056957ee5671/jetified-cyanea-1.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/cyanea/1.0.2/7bc60c12095c2d542d261a8c817f3d92b5a46c5f/cyanea-1.0.2-javadoc.jar!/" />

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="230dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rootViewCardView"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_5"
+        app:cardCornerRadius="@dimen/dimen_20dp"
+        app:cardElevation="@dimen/padding_5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_weight="1.2">
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/brandName"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audi"
+                        android:singleLine="true"
+                        android:paddingStart="@dimen/padding_5"
+                        android:paddingEnd="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/carName"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audi Q2"
+                        android:singleLine="true"
+                        android:paddingStart="@dimen/padding_5"
+                        android:paddingEnd="5dp"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/pricePerKm"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2000/Km"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight="2.6">
+                <ImageView
+                    android:id="@+id/carImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/car1"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_weight="1.2">
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+                    <TextView
+                        android:id="@+id/details"
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Details"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/dimen_12sp"
+                            android:visibility="invisible"
+                        android:gravity="center"
+                        android:fontFamily="@font/font_opensans_semibold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/booknow_btn"
+                    android:layout_weight="1.2">
+                    <TextView
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Rent Now"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:id="@+id/booknow"
+                        android:gravity="center"
+                        android:fontFamily="@font/font_opensans_semibold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

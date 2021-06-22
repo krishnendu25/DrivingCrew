@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/centre_background"
-    tools:context=".View.UI.Activity.Rider.Car_Booking_Form">
+    tools:context=".View.UI.Activity.Rider.CarBookingForm_ByRider">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp">
@@ -14,6 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:onClick="finishActivity"
             android:layout_marginStart="@dimen/padding_10"
             android:src="@drawable/ic_baseline_keyboard_backspace_24" />
 
@@ -36,20 +37,24 @@
                 android:layout_marginEnd="@dimen/dimen_20dp"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
+                    android:id="@+id/carNameTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center|start"
-                    android:text="Audi Q2"
                     android:textColor="@color/white"
                     android:textSize="22sp" />
 
                 <ImageView
+                    android:id="@+id/carImageIV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/car3s"/>
+                    android:layout_margin="@dimen/dimen_20dp"
+                    android:scaleType="fitCenter"
+                   />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,6 +73,7 @@
                             android:layout_height="35dp"
                             android:src="@drawable/speedometer"/>
                         <TextView
+                            android:id="@+id/milageTV"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
@@ -95,6 +101,7 @@
                             android:layout_height="35dp"
                             android:src="@drawable/seat"/>
                         <TextView
+                            android:id="@+id/sitNumTV"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
@@ -102,7 +109,7 @@
                             android:textColor="@color/white"
                             android:gravity="center"
                             android:layout_marginTop="@dimen/padding_5"
-                            android:text="8 Seats"/>
+                            android:text="4 Seats"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -118,6 +125,7 @@
                             android:layout_height="35dp"
                             android:src="@drawable/ic_oil"/>
                         <TextView
+                            android:id="@+id/fuleTypeTV"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
@@ -133,65 +141,73 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="@dimen/dimen_16dp"
+                    android:text="Booking Start Date"
                     android:textColor="@color/white"
-                    android:layout_marginTop="@dimen/dimen_20dp"
-                    android:text="Booking Start Date"/>
+                    android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
+                    android:id="@+id/startDateTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="center|start"
-                    android:textColor="@color/white"
-                    android:singleLine="true"
+                    android:onClick="openStartDatePicker"
+                    android:hint="Please Select Start Date"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
-                    android:textColorHint="#79FFFFFF"
-                    android:hint="Please Select Start Date"/>
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#79FFFFFF" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="@dimen/dimen_16dp"
-                    android:textColor="@color/white"
                     android:layout_marginTop="@dimen/padding_10"
-                    android:text="Booking Start Time"/>
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Booking Start Time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
                 <TextView
+                    android:id="@+id/startTimeTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="center|start"
-                    android:textColor="@color/white"
-                    android:singleLine="true"
+                    android:onClick="openStartTimePicker"
+                    android:hint="Please Select Start Time"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
-                    android:textColorHint="#79FFFFFF"
-                    android:hint="Please Select Start Time"/>
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#79FFFFFF" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="@dimen/dimen_16dp"
-                    android:textColor="@color/white"
                     android:layout_marginTop="@dimen/padding_10"
-                    android:text="Booking End Date"/>
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Booking End Date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
                 <TextView
+                    android:id="@+id/endDateTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="center|start"
-                    android:textColor="@color/white"
-                    android:singleLine="true"
+                    android:onClick="openEndDatePicker"
+                    android:hint="Please Select End Date"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
-                    android:textColorHint="#79FFFFFF"
-                    android:hint="Please Select End Date"/>
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#79FFFFFF" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -199,21 +215,25 @@
                     android:layout_marginTop="@dimen/padding_10"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Booking End Time"
+
                     android:textColor="@color/white"
                     android:textSize="@dimen/dimen_16dp" />
 
                 <TextView
+                    android:id="@+id/endTimeTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="center|start"
-                    android:textColor="@color/white"
-                    android:singleLine="true"
+                    android:onClick="openEndTimePicker"
+                    android:hint="Please Select End Time"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
-                    android:textColorHint="#79FFFFFF"
-                    android:hint="Please Select End Time"/>
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#79FFFFFF" />
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -224,6 +244,7 @@
                     android:layout_marginTop="@dimen/padding_10"
                     android:text="Drive By"/>
                 <TextView
+                    android:id="@+id/selectYouTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
@@ -231,11 +252,67 @@
                     android:gravity="center|start"
                     android:textColor="@color/white"
                     android:singleLine="true"
+                    android:onClick="selectDriverType"
                     android:drawableEnd="@drawable/ic_dropdown_white"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
                     android:textColorHint="#79FFFFFF"
-                    android:hint="Please Select Drive By"/>
+                    android:hint="Please Select"/>
+
+                <LinearLayout
+                    android:id="@+id/vehicleNumberView"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/vehicle_number"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_16dp" />
+
+                    <EditText
+                        android:id="@+id/vehicleNumberED"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/white_broder"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center|start"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:paddingStart="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:textColorHint="#79FFFFFF"
+                        android:hint="Please Enter Vehicle Number"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Number Of Passengers"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp" />
+
+                <EditText
+                    android:id="@+id/PassengersED"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/white_broder"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:textColorHint="#79FFFFFF"
+                    android:hint="Please Enter Vehicle Number"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -245,6 +322,7 @@
                     android:layout_marginTop="@dimen/padding_10"
                     android:text="Source Location"/>
                 <TextView
+                    android:id="@+id/sourceLocationTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
@@ -252,6 +330,7 @@
                     android:gravity="center|start"
                     android:textColor="@color/white"
                     android:singleLine="true"
+                    android:onClick="mSourceLocationClick"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
                     android:textColorHint="#79FFFFFF"
@@ -266,6 +345,7 @@
                     android:layout_marginTop="@dimen/padding_10"
                     android:text="Destination Location"/>
                 <TextView
+                    android:id="@+id/endLocationTV"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/white_broder"
@@ -273,6 +353,7 @@
                     android:gravity="center|start"
                     android:textColor="@color/white"
                     android:singleLine="true"
+                    android:onClick="mEndLocationClick"
                     android:paddingStart="@dimen/padding_10"
                     android:paddingEnd="@dimen/padding_10"
                     android:textColorHint="#79FFFFFF"
@@ -293,6 +374,7 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <TextView
+            android:id="@+id/rentingAmmountTV"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -309,6 +391,7 @@
             android:background="#1C1C1C"
             android:gravity="center"
             android:text="Rent Now"
+            android:onClick="hitRentNowButton"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_semibold"

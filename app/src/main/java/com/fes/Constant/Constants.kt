@@ -45,7 +45,8 @@ class Constants {
     companion object obj {
 
         val userTypeList = Arrays.asList("Driver","Rider")
-
+        val userList = Arrays.asList("Yes","No")
+        val driveBy = Arrays.asList("self","driver")
         fun getCurrentUnixTimeStamps(): String? {
             return TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis())
                 .toString()
@@ -272,6 +273,9 @@ class Constants {
                 ""
             }
         }
+
+
+
 
         fun getBitmapFromURL(src: String?): Bitmap? {
             return try {

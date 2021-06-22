@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43A047"
+    android:orientation="vertical"
+    tools:context=".View.UI.Activity.Others.AboutUs">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/white_btn" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img"
+            android:translationY="-20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/about_us"
+                android:textColor="#43A047"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/AboutUsTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_16dp"
+                android:fontFamily="@font/font_opensans_regular"
+                android:gravity="center"
+                android:textColor="@color/color_click_overlay"
+                android:layout_margin="@dimen/padding_10"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_about" />
+    </RelativeLayout>
+
+</LinearLayout>
